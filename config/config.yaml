@@ -1,0 +1,71 @@
+# =========================
+# LLM CONFIG
+# =========================
+llm:
+  provider: ollama
+  model: qwen3:4b
+  base_url: http://localhost:11434/v1
+  temperature: 0.7
+  max_tokens: 512
+  api_key: ollama
+
+
+# =========================
+# AGENT CONFIG
+# =========================
+agents:
+  max_consecutive_auto_reply: 3
+  planner:
+    max_turns: 1
+    max_auto_reply: 1
+
+  worker:
+    max_turns: 1
+    max_auto_reply: 1
+
+  writer:
+    max_turns: 1
+    max_auto_reply: 1
+
+
+# =========================
+# MEMORY CONFIG
+# =========================
+memory:
+  short_term:
+    max_messages: 10
+
+  long_term:
+    top_k: 3
+    enable: true
+
+
+# =========================
+# TOOL CONFIG
+# =========================
+tools:
+  enable_search: true
+  enable_calculator: true
+
+
+# =========================
+# PERFORMANCE CONFIG
+# =========================
+performance:
+  fast_mode: true          # use single agent for simple tasks
+  simple_task_keywords:
+    - plan
+    - list
+    - explain
+    - summary
+
+  skip_memory_for_simple: true
+  skip_tools_for_simple: true
+
+
+# =========================
+# DEBUG CONFIG
+# =========================
+debug:
+  verbose_logs: true
+  print_chat_history: false
