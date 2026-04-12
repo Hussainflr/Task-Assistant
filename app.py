@@ -1,5 +1,5 @@
 import streamlit as st
-from orchestrator import run_multi_agent
+from agents.orchestrator import run_multi_agent
 
 # -----------------------------
 # Session State

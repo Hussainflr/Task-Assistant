@@ -1,7 +1,7 @@
 from autogen import UserProxyAgent
-from agents import create_planner
-from agents import create_worker
-from agents import create_writer
+from agents.agents import create_planner
+from agents.agents import create_worker
+from agents.agents import create_writer
 
 from memory.short_term import ShortTermMemory
 from memory.long_term import LongTermMemory
