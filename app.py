@@ -20,11 +20,11 @@ if "final" not in st.session_state:
 # -----------------------------
 # UI
 # -----------------------------
-st.title("🧠 Multi-Agent Task Assistant")
+st.title(" Multi-Agent Task Assistant")
 
 user_input = st.text_input("Enter your task:")
 
-if st.button("🚀 Run"):
+if st.button("Run"):
 
     if not user_input:
         st.warning("Please enter a task")
@@ -44,15 +44,15 @@ if st.button("🚀 Run"):
 # -----------------------------
 # Display
 # -----------------------------
-st.subheader("🧩 Plan")
+st.subheader(" Plan")
 st.write(st.session_state.plan)
 
-st.subheader("⚙️ Execution")
+st.subheader("Execution")
 st.write(st.session_state.work)
 
-st.subheader("📝 Final Answer")
+st.subheader("Final Answer")
 st.write(st.session_state.final)
 
-st.subheader("📜 Logs")
+st.subheader("Logs")
 for log in st.session_state.logs:
     st.text(log)
